@@ -6,12 +6,21 @@ Frequently asked questions for BU Research Computing Services staff and system a
 
 ## Table of Contents
 
+- [General](#general)
 - [User Account Management](#user-account-management)
 - [Using the VM](#using-the-vm)
-- [File & Storage](#file--storage-issues)
 - [BU Deployment Specifics & Limitations](#bu-deployment-specifics--limitations)
 - [Policy](#policy)
+- [RCS Support](#rcs-support)
 
+
+---
+
+## General
+
+**Q: What is the scope of what tiCrypt is trying to secure?**
+
+To Be Answered
 
 ---
 
@@ -51,8 +60,6 @@ To Be Answered
 
 ---
 
-## File & Storage
-
 **Q: How do I copy and paste in the terminal connected to a VM?**
 
 **macOS & Linux:** Highlight the text in the terminal you want to copy, then use the File menu to select Copy. Use the File menu to Paste.
@@ -86,5 +93,25 @@ To Be Answered
 ---
 
 **Q: What software is allowed to be installed on the VMs? Are Singularity or Docker containers allowed?**
+
+To Be Answered
+
+---
+
+## RCS Support
+
+**Q: If a researcher needs help troubleshooting a workflow on tiCrypt, can the RCS team request screenshots of the issue or error messages via ServiceNow or email?**
+
+To Be Answered
+
+---
+
+**Q: Is a Zoom call with screenshare allowed for troubleshooting?**
+
+To Be Answered
+
+---
+
+**Q: Can the RCS team "beuser" (impersonate) a researcher's account to assist with troubleshooting?**
 
 To Be Answered
