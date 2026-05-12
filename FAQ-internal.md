@@ -102,16 +102,16 @@ To Be Answered
 
 **Q: If a researcher needs help troubleshooting a workflow on tiCrypt, can the RCS team request screenshots of the issue or error messages via ServiceNow or email?**
 
-To Be Answered
+Yes — screenshots of issues and error messages can be requested via ServiceNow or email. However, be careful not to expose sensitive data; avoid requesting screenshots that show open data files. *(Answered by Katia Bulekova, 2026-05-12)*
 
 ---
 
 **Q: Is a Zoom call with screenshare allowed for troubleshooting?**
 
-To Be Answered
+Yes. *(Answered by Katia Bulekova, 2026-05-12)*
 
 ---
 
 **Q: Can the RCS team "beuser" (impersonate) a researcher's account to assist with troubleshooting?**
 
-To Be Answered
+No. Only members of a project have full access to that project's data and VM. Everyone else — including the Appsteam and members of other projects — are considered "outsiders" and will not have access. Each project has its own VM accessible only to its members. *(Answered by Katia Bulekova, 2026-05-12)*
