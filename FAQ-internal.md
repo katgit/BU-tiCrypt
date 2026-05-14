@@ -26,6 +26,18 @@ To Be Answered
 
 ## User Account Management
 
+**Q: When I log into tiCrypt, a notice appeared indicating permissions have changed on my account. What does this mean?**
+
+To Be Answered
+
+---
+
+**Q: When I logged into tiCrypt, a message appeared indicating I had a failed login attempt. What should I do?**
+
+To Be Answered
+
+---
+
 **Q: What if I forgot my password?**
 
 To Be Answered
