@@ -8,6 +8,7 @@ Frequently asked questions for BU Research Computing Services staff and system a
 
 - [General](#general)
 - [User Account Management](#user-account-management)
+- [Connecting to POC Deployment](#connecting-to-poc-deployment)
 - [Using the VM](#using-the-vm)
 - [BU Deployment Specifics & Limitations](#bu-deployment-specifics--limitations)
 - [Policy](#policy)
@@ -57,6 +58,14 @@ To Be Answered
 **Windows:** To Be Answered
 
 **Linux:** To Be Answered
+
+---
+
+## Connecting to POC Deployment
+
+**Q: When I open the tiCrypt application, it says "Loading...." but appears frozen. What is wrong?**
+
+The tiCrypt application may not be able to connect to the servers. Make sure you are on the BU network or using VPN before opening the application. After connecting to the VPN, if you are using a Windows machine, you may need to terminate the tiCrypt application using the Task Manager and restart the application before it detects the VPN connection.
 
 ---
 
