@@ -71,6 +71,16 @@ The tiCrypt application may not be able to connect to the servers. Make sure you
 
 ## Using the VM
 
+**Q: How do I get added to a VM?**
+
+To Be Answered
+
+For reference Andy & Yun were added to the VM by Augustine. Two steps:
+1. Users are added to the VM
+2. Apply additional permissions template to your accounts
+
+> Be sure to reload the ticrypt application for it to take affect
+
 **Q: How do I access the Remote Desktop?**
 
 **macOS:** To Be Answered
