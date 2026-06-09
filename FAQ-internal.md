@@ -83,7 +83,23 @@ For reference Andy & Yun were added to the VM by Augustine. Two steps:
 
 **Q: How do I access the Remote Desktop?**
 
-**macOS:** To Be Answered
+**macOS:**
+
+**What you'll need:** Windows App installed on your Mac
+
+1. Log in to tiCrypt and access your VM
+2. Click **Start Remote Desktop** — this will:
+   - Open an **Instructions for VM** dialog containing your login credentials and a **Download RDP File** button
+   - Launch the Windows App application
+3. In the **Instructions for VM** dialog, click **Download RDP File** and save it to your computer
+4. In Windows App:
+   - Go to **Connections > Import from RDP File**, navigate to the saved `.rdp` file, and click **Import**
+   - The VM will appear under **Saved Devices** — click the ellipsis (**...**) to connect
+5. When prompted for a password, return to the **Instructions for VM** dialog, click **Copy Password**, and paste it into the password field
+6. When asked to confirm the connection, click **Continue**
+7. The remote desktop will open
+
+> When finished, disconnect from the VM via the Windows App Connection Center, then delete the `.rdp` file from your computer
 
 **Linux:** To Be Answered
 
