@@ -123,6 +123,12 @@ To Be Answered
 
 ---
 
+**Q: Where should the project files be stored on the VM?**
+
+To Be Answered
+
+---
+
 ## BU Deployment Specifics & Limitations
 
 **Q: Can users connect the File Transfer Hub to external cloud storage (S3, Google Drive, etc.)?**
