@@ -61,6 +61,15 @@ To Be Answered
 
 ---
 
+**Q: Can I use the same private key JSON file to log in from a different computer or operating system? (e.g., started on a Linux machine and now need to log in from a Windows laptop)**
+
+To Be Answered
+
+- Is it technically possible?
+- What is the recommendation for this scenario?
+
+---
+
 ## Connecting to POC Deployment
 
 **Q: When I open the tiCrypt application, it says "Loading...." but appears frozen. What is wrong?**
