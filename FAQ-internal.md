@@ -138,6 +138,14 @@ To Be Answered
 
 ---
 
+### Troubleshooting
+
+**Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
+
+When attempting to connect, the connection stalls indefinitely and does not complete. Restart the local machine, reopen the tiCrypt application and try to connect to the VM.
+
+---
+
 ## BU Deployment Specifics & Limitations
 
 **Q: Can users connect the File Transfer Hub to external cloud storage (S3, Google Drive, etc.)?**
