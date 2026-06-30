@@ -45,8 +45,7 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 
 ## 6. Your Private Key JSON File (Critical Concept)
 - What it is: a file that holds your personal encryption key
-- Where to store it: secure, backed-up location (not the desktop; recommend a password
-  manager or encrypted drive) — keep it safe
+- Where to store it: secure, backed-up location — keep it safe
 - Every login requires this file
 
 ## 7. Logging In
