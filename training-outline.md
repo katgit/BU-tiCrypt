@@ -65,15 +65,29 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 - Recommended workflow for moving data in and out
 
 ## 10. Working with the Virtual Machine (VM)
-- What the VM is and how it relates to your project
 - How to request VM access (contact your project administrator)
+- What the VM is and how it relates to your project
+- Using the VM terminal:
+  - tiCrypty application: Terminal Hub
+  - File menu or browser interface at 127.0.0.1:8080  (enables copy/paste)
 - Accessing the remote desktop (Windows App on macOS; platform-specific notes)
-- Using the VM terminal: copy/paste tips (File menu or browser interface at 127.0.0.1:8080)
+  - [tiCrypt Remote Desktop App Instructions for Windows](https://docs.google.com/document/d/1akM_C1k1RuConJPDTSzf_32xFlid1zk0/edit)
+  - [macOS instructions](https://github.com/katgit/BU-tiCrypt/blob/main/FAQ-internal.md#using-the-vm) 
 - When you are done: disconnect from VM and delete the local .rdp file
+- Launching RStudio
+- Installing R packages
 
 ## 11. Submitting Jobs
 - tiCrypt uses the SLURM scheduler (note: this differs from the SCC, which uses SGE)
-- *Details to be filled in*
+
+```batch
+# To submit the job, run:
+sbatch <script_name>
+squeue -u <username>	# displays all currently queued and running jobs for a specific user
+# Optional:
+sacct       # display accounting data for jobs
+sinfo				# show node and partition status
+```
 
 ## 12. Security Responsibilities and Policies
 - Users are responsible for safeguarding their private key and tiCrypt password
