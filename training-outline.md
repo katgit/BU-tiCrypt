@@ -36,6 +36,7 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
   - tiCryptConnect installer (OS-specific)
   - BU deployment file (`deployment-bu.dep`) — ties the client to BU's instance
 - Walk through: install → launch → upload .dep file → launch BU deployment
+- [Download Required Files](https://github.com/katgit/BU-tiCrypt#1-download-required-files)
 
 ## 5. Account Creation
 - Register with your BU email as your Login ID
