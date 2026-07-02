@@ -88,6 +88,8 @@ squeue -u <username>	# displays all currently queued and running jobs for a spec
 sacct       # display accounting data for jobs
 sinfo				# show node and partition status
 ```
+See [example scripts](https://github.com/katgit/BU-tiCrypt/tree/main/examples/R) to run R code as a job
+
 
 ## 12. Security Responsibilities and Policies
 - Users are responsible for safeguarding their private key and tiCrypt password
