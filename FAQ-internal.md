@@ -115,6 +115,7 @@ Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  
 **Linux:** To Be Answered
 
 **Windows:** There is an open issue investigating problems with the native RDP tool — see [GitHub Issue #3](https://github.com/katgit/BU-tiCrypt/issues/3) for updates.
+- Yun's instructions for [Windows Remote Desktop setup](https://docs.google.com/document/d/1akM_C1k1RuConJPDTSzf_32xFlid1zk0/edit?usp=drive_link&ouid=112727426210481795582&rtpof=true&sd=true).
 
 ---
 
