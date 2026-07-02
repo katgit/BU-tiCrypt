@@ -92,6 +92,8 @@ For reference Andy & Yun were added to the VM by Augustine. Two steps:
 
 **Q: How do I access the Remote Desktop?**
 
+Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  Use the TiCrypt Desktop application.
+
 **macOS:**
 
 **What you'll need:** Windows App installed on your Mac
