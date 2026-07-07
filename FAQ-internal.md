@@ -110,6 +110,8 @@ Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  
 6. When asked to confirm the connection, click **Continue**
 7. The remote desktop will open
 
+> Note: Remote Desktop opens a Linux desktop. The password is automatically saved in your clipboard, so if you're prompted for a password again, just paste it with **Cmd+V** (macOS) or **Ctrl+V** (Windows).
+
 > When finished, disconnect from the VM via the Windows App Connection Center, then delete the `.rdp` file from your computer
 
 **Linux:** To Be Answered
