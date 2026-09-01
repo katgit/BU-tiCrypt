@@ -183,12 +183,12 @@ You should now have access to BU tiCrypt!
 
 ## Additional Resources
 
-- [tiCrypt Official Documentation](https://ticrypt.com/docs/ticrypt-guidelines-to/registration/)
+- [tiCrypt Official Documentation](https://ticrypt.com/docs/introduction)
 - [BU Research Computing Services](https://www.bu.edu/tech/support/research/)
 - For technical support, contact: [help@scc.bu.edu](mailto:help@scc.bu.edu)
 
 ---
 
-**Last Updated:** [2026-02-21]  
+**Last Updated:** [2026-09-01]  
 **Maintained by:** BU Research Computing Services
 

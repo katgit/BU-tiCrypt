@@ -10,9 +10,11 @@ Frequently asked questions for BU Research Computing Services staff and system a
 - [User Account Management](#user-account-management)
 - [Connecting to POC Deployment](#connecting-to-poc-deployment)
 - [Using the VM](#using-the-vm)
+- [Slurm Jobs](#slurm-jobs)
 - [BU Deployment Specifics & Limitations](#bu-deployment-specifics--limitations)
 - [Policy](#policy)
 - [RCS Support](#rcs-support)
+- [Apps Team](#apps-team)
 
 
 ---
@@ -22,6 +24,28 @@ Frequently asked questions for BU Research Computing Services staff and system a
 **Q: What is the scope of what tiCrypt is trying to secure?**
 
 To Be Answered
+
+---
+
+**Q: What is the difference between a project, a team, and a group?**
+
+These three terms control different things, and they are independent of one another — being a member of a team does not imply membership in a project, and vice versa.
+
+| Term | Controls | Definition |
+|---|---|---|
+| **Project** | Access to data | A tagging mechanism with system-enforced separation. When a resource (file, drive, VM, or inbox) is tagged with a project, only active members of that project can access it. |
+| **Team** | Resource limits | Every VM, drive, and storage quota belongs to a team. Your team's quota determines how many cores, how much memory, and how much drive storage you can use. |
+| **Group** | Sharing between users | A collaborative collection of users who share access to resources. Unlike teams, which govern quotas, groups let you share files and drives with a defined set of collaborators. |
+
+tiCrypt vendor documentation:
+
+- [User Guide Overview](https://www.ticrypt.com/docs/user-guide/user-overview/)
+- [Projects](https://www.ticrypt.com/docs/user-guide/vault/projects)
+- [Groups](https://www.ticrypt.com/docs/user-guide/vault/groups)
+- [Team Resource Usage](https://www.ticrypt.com/docs/user-guide/account/team-resource-usage)
+- [VM Roles and Permissions](https://www.ticrypt.com/docs/concepts/vm-roles-and-permissions)
+
+> **BU-specific definitions:** To Be Answered — the table above is tiCrypt's general product documentation. If the BU deployment uses these terms more narrowly (for example, a fixed mapping between an RCS project and a tiCrypt team, or local naming conventions), document that here.
 
 ---
 
@@ -48,6 +72,14 @@ To Be Answered
 **Q: I lost my private key file, what do I do?**
 
 To Be Answered
+
+---
+
+**Q: How do I determine my current role for a project? Which projects (data access) and teams (resources) am I a member of?**
+
+To Be Answered
+
+> For what these terms mean, see [What is the difference between a project, a team, and a group?](#general) in the General section.
 
 ---
 
@@ -143,11 +175,35 @@ To Be Answered
 
 ---
 
+**Q: Should VMs be used as compute nodes?**
+
+No — treat the VM as a **login node**, not a compute node.
+
+- **If the VM's resources (CPU, memory) permit it,** it is appropriate to run a command or workflow interactively on the VM.
+- **If a workflow needs more resources (CPU, memory) than the VM provides,** submit a Slurm job from the VM instead.
+
+---
+
 ### Troubleshooting
 
 **Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
 
 When attempting to connect, the connection stalls indefinitely and does not complete. Restart the local machine, reopen the tiCrypt application and try to connect to the VM.
+
+---
+
+## Slurm Jobs
+
+**Q: My Slurm job is not submitting. How do I troubleshoot this issue? (Common Slurm issues)**
+
+To Be Answered
+
+> **How to build this answer:** Collect real submission failures seen on tiCrypt — the actual error message plus the directive or condition that caused it — and write tiCrypt-specific guidance from those examples, rather than reproducing generic Slurm troubleshooting advice.
+
+Reference material already in this repo:
+
+- [SGE / Slurm Job Submission Directives](./doc/slurm/sge-slurm-job-directives.md) — includes a `tiCrypt support` column. Several resource directives are marked **No** (`--mem-per-cpu`, `--cpus-per-task`, `--nodes`/`--ntasks-per-node`), and array jobs are noted as only completing their first task on the POC VM.
+- [SGE / Slurm Job Environment Variables](./doc/slurm/sge-slurm-env-variables.md)
 
 ---
 
@@ -190,3 +246,16 @@ Yes. *(Answered by Katia Bulekova, 2026-05-12)*
 **Q: Can the RCS team "beuser" (impersonate) a researcher's account to assist with troubleshooting?**
 
 No. Only members of a project have full access to that project's data and VM. Everyone else — including the Appsteam and members of other projects — are considered "outsiders" and will not have access. Each project has its own VM accessible only to its members. *(Answered by Katia Bulekova, 2026-05-12)*
+
+---
+
+## Apps Team
+
+**Q: How does software installed on the staging VM become available on other users' VMs?**
+
+**Module deployment topology on tiCrypt:**
+
+- **Staging VM** (`aa-scc-testvm1`, set up by a tiCrypt administrator) is where the RCS team installs/updates modules — changes are visible immediately there.
+- **User VMs** (e.g. a tiCrypt project PI's) only get a copy of the module tree, and it **lags behind staging** — they are not live-synced.
+- **Propagation is manual:** pushing a module update from staging to a user's VM requires asking a **tiCrypt administrator** to do it.
+- **Why:** software on staging will eventually need to pass a **security vetting process** before being pushed to user VMs. Who runs that process and what it covers is still undecided.
