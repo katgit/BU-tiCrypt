@@ -223,7 +223,7 @@ To Be Answered
 
 ---
 
-### Troubleshooting
+## Troubleshooting
 
 **Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
 
