@@ -201,9 +201,23 @@ To Be Answered
 
 - Anything not saved onto the mounted drives will be lost when the VM restarts.  A fresh VM image is loaded when the VM is powered on or restarted.
 
+---
+
+**Q: When I delete a VM, will this also delete the drives mounted on this VM?**
+
+- No.  The drives have to be deleted as a separate action using the Drives management tab.  Since they are not deleted, one can mount the drives on a new VM.
+
+---
+
 ## Creating Drives
 
 **Q: Is there a limit on how many drives I can create?**
+
+To Be Answered
+
+---
+
+**Q: Can I access the contents of the drives without using a VM?**
 
 To Be Answered
 
