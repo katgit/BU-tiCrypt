@@ -10,6 +10,7 @@ Frequently asked questions for BU Research Computing Services staff and system a
 - [User Account Management](#user-account-management)
 - [Connecting to POC Deployment](#connecting-to-poc-deployment)
 - [Using the VM](#using-the-vm)
+- [Creating Drives](#creating-drives)
 - [Slurm Jobs](#slurm-jobs)
 - [BU Deployment Specifics & Limitations](#bu-deployment-specifics--limitations)
 - [Policy](#policy)
@@ -185,6 +186,24 @@ No — treat the VM as a **login node**, not a compute node.
 ---
 
 **Q: Should I shutdown my VM when it is not in use?**
+
+To Be Answered
+
+---
+
+**Q: Can I mount a HOME drive onto multiple VMs?**
+
+- No.  The HOME drive can only be mounted on one VM at a time.  If you want to mount the HOME drive on another VM, you need to shutdown the current VM that has the HOME drive mounted.  Then in the new VM attach the HOME drive and then start the new VM.
+
+---
+
+**Q: The VM was restarted and I lost the scripts/software I installed.  What happened?**
+
+- Anything not saved onto the mounted drives will be lost when the VM restarts.  A fresh VM image is loaded when the VM is powered on or restarted.
+
+## Creating Drives
+
+**Q: Is there a limit on how many drives I can create?**
 
 To Be Answered
 
