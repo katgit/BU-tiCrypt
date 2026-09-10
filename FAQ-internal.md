@@ -184,6 +184,12 @@ No — treat the VM as a **login node**, not a compute node.
 
 ---
 
+**Q: Should I shutdown my VM when it is not in use?**
+
+To Be Answered
+
+---
+
 ### Troubleshooting
 
 **Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
