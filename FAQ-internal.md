@@ -209,6 +209,10 @@ To Be Answered
 
 ---
 
+**Q: I added a user to the VM, or I changed their permissions, but when the user connects to the VM the change is not reflected.  What do I do?**
+
+- The changes made via the tiCrypt Connect interface may not propagate immediately to the VM.  To expedite the process, sync the user permission with the vm following the instructions [here](https://www.ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)
+
 ## Creating Drives
 
 **Q: Is there a limit on how many drives I can create?**
