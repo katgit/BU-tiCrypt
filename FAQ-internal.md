@@ -200,6 +200,7 @@ To Be Answered
 **Q: The VM was restarted and I lost the scripts/software I installed.  What happened?**
 
 - Anything not saved onto the mounted drives will be lost when the VM restarts.  A fresh VM image is loaded when the VM is powered on or restarted.
+- TODO:  Add the general files paths of where the Drives are mounted.
 
 ---
 
@@ -212,8 +213,17 @@ To Be Answered
 **Q: I added a user to the VM, or I changed their permissions, but when the user connects to the VM the change is not reflected.  What do I do?**
 
 - The changes made via the tiCrypt Connect interface may not propagate immediately to the VM.  To expedite the process, sync the user permission with the vm following the instructions [here](https://www.ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)
+- The user may also need to open a fresh terminal to have the changes take affect.
 
 ## Creating Drives
+
+---
+
+**Q: How do I find a mounted drive on the VM?  What are the mounted file paths?
+
+To Be Answered
+
+---
 
 **Q: Is there a limit on how many drives I can create?**
 
