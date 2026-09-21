@@ -219,7 +219,7 @@ To Be Answered
 
 ---
 
-**Q: How do I find a mounted drive on the VM?  What are the mounted file paths?
+**Q: How do I find a mounted drive on the VM?  What are the mounted file paths?**
 
 To Be Answered
 
@@ -233,9 +233,16 @@ To Be Answered
 
 **Q: Can I access the contents of the drives without using a VM?**
 
-To Be Answered
+In order to see the contents of a drive, the drive needs to be mounted on the VM.  Once it is mounted, you can view the files using the "File Explorer" option in the VM menu, a terminal connected to the VM, or a remote desktop session.
 
 ---
+
+**Q: I need more space in my drive.  Can I increase the storage capacity of a drive?**
+
+The storage capacity of the drive is specified when creating the drive.  It cannot be changed after the drive is created.
+
+---
+
 
 ## Troubleshooting
 
