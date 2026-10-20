@@ -22,6 +22,24 @@ Frequently asked questions for BU Research Computing Services staff and system a
 
 ## General
 
+**Q: I am a PI that has research that requires a ticrypt environment.  How do I get started?**
+
+To Be Answered
+
+---
+
+**Q: My PI has a ticrypt project created.  How do I get an account on TiCrypt and be added to my PI's project?**
+
+To Be Answered
+
+---
+
+**Q: What training do I need to take in order to get an account on ticrypt?**
+
+To Be Answered
+
+---
+
 **Q: What is the scope of what tiCrypt is trying to secure?**
 
 To Be Answered
@@ -215,6 +233,14 @@ To Be Answered
 - The changes made via the tiCrypt Connect interface may not propagate immediately to the VM.  To expedite the process, sync the user permission with the vm following the instructions [here](https://www.ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)
 - The user may also need to open a fresh terminal to have the changes take affect.
 
+---
+
+**Q: How can I confirm that my VM is configured to use SLURM?**
+
+To be answered
+
+---
+
 ## Creating Drives
 
 ---
@@ -253,6 +279,10 @@ When attempting to connect, the connection stalls indefinitely and does not comp
 ---
 
 ## Slurm Jobs
+
+**Q: What compute resources are available on TiCrypt?  Are GPUs available?**
+
+To Be Answered
 
 **Q: My Slurm job is not submitting. How do I troubleshoot this issue? (Common Slurm issues)**
 
@@ -310,6 +340,13 @@ No. Only members of a project have full access to that project's data and VM. Ev
 ---
 
 ## Apps Team
+
+**Q: How can I determine what version of key components of ticrypt are installed on our system?**
+
+VM Controller - To be answered
+
+The Connect Application will have the version numbers for **Front End**, **Back End**, and **Connect Application** as defined in the [TiCrypt Doc](https://ticrypt.com/docs/user-guide/account/connect-application/#check-which-versions-you-are-running). 
+
 
 **Q: How does software installed on the staging VM become available on other users' VMs?**
 
