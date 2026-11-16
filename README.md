@@ -11,8 +11,8 @@ Comprehensive documentation for setting up and accessing tiCrypt at Boston Unive
   - [2. Install tiCryptConnect](#2-install-ticryptconnect)
   - [3. Initial Setup](#3-initial-setup)
   - [4. Create User Account](#4-create-user-account)
-  - [5. Administrator Approval](#5-administrator-approval)
-  - [6. Complete Registration](#6-complete-registration)
+  - [5. Save Your Key File](#5-save-your-key-file)
+  - [6. Administrator Approval](#6-administrator-approval)
 - [First Login](#first-login)
 - [Troubleshooting](#troubleshooting)
 - [Additional Resources](#additional-resources)
@@ -84,32 +84,43 @@ You should now see the BU tiCrypt Deployment screen:
 
 <img width="353" height="380" alt="Create User Account interface" src="https://github.com/user-attachments/assets/0a467c6a-f6cf-4487-82ee-dfc76fc18ded" />
 
-1. Click the green **"Create User Account"** button
-2. Fill in your information:
+> **Needs to be tested, based on tiCrypt documentation updates.** The steps and button names in sections 4 to 6 follow the current [tiCrypt Get Started guide](https://ticrypt.com/docs/get-started#2-register-your-account) and have not yet been verified with a new BU account. The screenshots may show older button names and the old order of steps.
+
+1. Click the green **"Create new user account"** button
+2. Click **"Link MFA Account"**. BU requires multi-factor authentication: sign in with your **BU Kerberos** password and approve the **Duo** prompt. (This is the only place you use your Kerberos password.)
+3. Fill in your information:
    - **Login ID:** Enter your BU email address (e.g., `rbrown@bu.edu`)
    - **First Name:** Your first name
    - **Last Name:** Your last name
-3. Click the blue **"Continue to Password"** button
+4. Click **"Next"**
 
 #### Set Your Password
 
 1. Create a **new password** for tiCrypt
    > **Important:** Do **NOT** use your BU Kerberos password. Choose a unique password and store it securely.
-2. Click the blue **"Continue to optional information"** button
+2. Confirm the password and click **"Next"**
 
-#### Complete Your Profile
+#### Review and Register
 
-1. Fill in additional information:
-   - Department
-   - Position
-   - Other relevant details
-2. Click the blue **"Review account"** button
-
-> **Note:** Your account now requires approval from a System Administrator before you can proceed.
+1. Under **Review**, check your details. To change something, click the header of that step.
+2. Click **"Register"**
+3. Save your key file when prompted (next section)
 
 ---
 
-### 5. Administrator Approval
+### 5. Save Your Key File
+
+Right after you click **Register**, tiCrypt asks you to save your key file. You do not need to wait for administrator approval.
+
+1. Choose a folder and click **"Save"**
+
+<img width="624" height="546" alt="Download private key JSON file interface" src="https://github.com/user-attachments/assets/7fe3b2e3-927f-4a0c-ae19-a722d741e864" />
+
+> **Critical:** This JSON file contains your private encryption key. Store it securely and back it up in more than one secure location. You will need it for every login, and you must never share it. If you lose both this file and your password, you may lose access to your encrypted data. Changing your password generates a new key file, so delete every copy of the old one.
+
+---
+
+### 6. Administrator Approval
 
 **For System Administrators:**
 
@@ -127,22 +138,7 @@ To activate a new user:
 
 **For New Users:**
 
-Wait for notification that your account has been activated before proceeding to the next step.
-
----
-
-### 6. Complete Registration
-
-Once activated by an administrator:
-
-1. Click the **"Finish registration"** button
-2. Download your **private key JSON file** when prompted
-
-<img width="624" height="546" alt="Download private key JSON file interface" src="https://github.com/user-attachments/assets/7fe3b2e3-927f-4a0c-ae19-a722d741e864" />
-
-> **Critical:** This JSON file contains your private encryption key. Store it securely - you will need it for every login. If you lose this file, you may lose access to encrypted data.
-
-3. Click the blue **"Continue to tiCrypt"** button
+Wait for notification that your account has been activated, then continue to [First Login](#first-login).
 
 ---
 
@@ -167,11 +163,15 @@ You should now have access to BU tiCrypt!
 
 ### Lost JSON Key File
 - **Problem:** Cannot locate your private key JSON file
-- **Solution:** Contact your System Administrator to regenerate your key (you may lose access to previously encrypted data)
+- **Solution:** If you have another copy, load that one. Keep backups of your key file in more than one secure location. If you lost both the key file and your password, your encrypted data cannot be recovered unless key escrow is set up for your account. Contact your System Administrator.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's escrow status and the recovery process.
 
 ### Password Issues
 - **Problem:** Forgot tiCrypt password
-- **Solution:** Contact your System Administrator for password reset procedures
+- **Solution:** Contact your System Administrator. A forgotten password can only be recovered if key escrow is set up for your account.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's escrow status and the recovery process.
 
 ### Installation Errors
 - **Problem:** tiCryptConnect fails to install
