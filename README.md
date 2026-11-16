@@ -34,13 +34,14 @@ Comprehensive documentation for setting up and accessing tiCrypt at Boston Unive
 
 #### tiCryptConnect Application
 
-Download the appropriate version for your operating system:
+Download the installer for your operating system from the tiCrypt download page: **https://ticrypt.com/download**.  The page picks a build for your computer; use "Other downloads" to choose another.
 
-| Operating System | Download Link |
-|-----------------|---------------|
-| **macOS** | [tiCryptConnect-4.0.16.pkg](https://storage.googleapis.com/ticrypt/connect/stable/4.0.16/tiCryptConnect-4.0.16.pkg) |
-| **Windows** | [tiCryptConnectInstaller-4.0.16.exe](https://storage.googleapis.com/ticrypt/connect/stable/4.0.16/tiCryptConnectInstaller-4.0.16.exe) |
-| **Linux** | [tiCryptConnect_v4.0.16_linux_amd64](https://storage.googleapis.com/ticrypt/connect/stable/4.0.16/tiCryptConnect_v4.0.16_linux_amd64) |
+| Operating System | Which installer |
+|-----------------|-----------------|
+| **Windows** | `.msix` package (the tiCrypt vendor recommends this one).  Use the `.exe` installer only if your computer's policy blocks MSIX packages.  Install only one of the two. |
+| **macOS** | `.pkg` for your chip: **Apple silicon** (M-series) or **Intel**.  Each refuses to install on the other kind of Mac. |
+| **Linux** | Ubuntu 24.04: `.deb`, installed with `sudo dpkg -i <file>`.  Fedora / Red Hat: `.rpm`, installed with `sudo dnf install <file>`.  *(Not yet tested at BU.)* |
+
 
 #### BU Deployment File
 
@@ -52,7 +53,7 @@ Download the [BU Deployment file (deployment-bu.dep)](https://storage.googleapis
 
 ### 2. Install tiCryptConnect
 
-1. Run the installer you downloaded for your operating system
+1. Run the installer you downloaded for your operating system (on Windows, the `.msix` opens in App Installer: click **Install**; on Linux, use `sudo` as shown above)
 2. Follow the installation prompts
 3. When you see the "Installation was successful" message, close the window
 4. Launch the tiCryptConnect application:
