@@ -319,6 +319,12 @@ When attempting to connect, the connection stalls indefinitely and does not comp
 
 To Be Answered
 
+**Q: The vendor documentation says there is no `module load`. Can I use `module load` on the BU VMs?**
+
+Yes.  The vendor's [Slurm Jobs](https://ticrypt.com/docs/user-guide/virtual-machines/slurm-jobs) page says tiCrypt VM images have no module system, but BU images support modules.  The software modules are provided on a read-only shared drive that is attached to every VM.  Run `module avail` to see which modules are available and `module load <name>` to load one, as in our [R example](./examples/R/test_r_module.sh).
+
+---
+
 **Q: My Slurm job is not submitting. How do I troubleshoot this issue? (Common Slurm issues)**
 
 To Be Answered
