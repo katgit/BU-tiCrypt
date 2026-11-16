@@ -84,19 +84,25 @@ That is the **Since you last logged in** summary shown at sign-in; it lists fail
 
 **Q: What if I forgot my password?**
 
-To Be Answered
+You cannot reset it yourself, because changing a password needs the current one.  Contact your administrator, who starts a key recovery through key escrow: the escrow users together recover your key, and you receive a new key file and a temporary password over a secure channel.  Load the new key file, log in with the temporary password, then set a new password under **Change Password**.  This only works if your account was enrolled in key escrow.  Without it, a forgotten password means the account and its data are unrecoverable.  See [If You Forgot Your Password](https://ticrypt.com/docs/user-guide/account/change-password#if-you-forgot-your-password).
+
+> **TO CONFIRM WITH THE SYSADMIN:** Does BU use key escrow, and is every researcher enrolled?  What is the recovery process at BU?
 
 ---
 
 **Q: I lost my private key file, what do I do?**
 
-To Be Answered
+If you still have your password and another copy of the key file, load that copy.  If you lost both your password and your key file, your data cannot be recovered unless your account was enrolled in key escrow; in that case contact your administrator to start a key recovery.  Keep backups of the key file in more than one secure location.  See [Private Keys](https://ticrypt.com/docs/user-guide/account/private-keys).
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's escrow status and recovery process (see the previous question).
 
 ---
 
 **Q: How do I determine my current role for a project? Which projects (data access) and teams (resources) am I a member of?**
 
-To Be Answered
+Open the user menu and choose **My Profile**, then **Associations**.  The **Teams** section lists your team memberships and the **Projects** section lists your project memberships.  See [Profile](https://ticrypt.com/docs/user-guide/account/profile#associations).  Your permissions come from the role an administrator gave you plus your team and project memberships.
+
+*(To Be Answered: where your role in a project is displayed.)*
 
 > For what these terms mean, see [What is the difference between a project, a team, and a group?](#general) in the General section.
 
@@ -114,10 +120,9 @@ To Be Answered
 
 **Q: Can I use the same private key JSON file to log in from a different computer or operating system? (e.g., started on a Linux machine and now need to log in from a Windows laptop)**
 
-To Be Answered
+Yes.  In the Connect Application, select your deployment card and click **Download key**, save the `<login-id>_<date>.key.json` file, then on the other computer click **Load Key** and select it.  Connect can hold more than one key at once.  Keep the copy in a secure place and do not email it or share it.  See [Private Keys](https://ticrypt.com/docs/user-guide/account/private-keys).
 
-- Is it technically possible?
-- What is the recommendation for this scenario?
+> **NEEDS TO BE TESTED:** Confirm at BU that a key file downloaded on one operating system (for example Linux) can be loaded and used to log in on another (for example Windows).
 
 ---
 
@@ -256,7 +261,7 @@ Shutting down a VM returns its cores and memory to your team's allocation ([Shut
 
 **Q: How can I confirm that my VM is configured to use SLURM?**
 
-To be answered
+To Be Answered
 
 ---
 
