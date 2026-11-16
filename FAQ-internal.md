@@ -72,13 +72,13 @@ tiCrypt vendor documentation:
 
 **Q: When I log into tiCrypt, a notice appeared indicating permissions have changed on my account. What does this mean?**
 
-To Be Answered
+That is the **Since you last logged in** summary shown at sign-in.  It lists failed sign-in attempts and changes to your role, permissions, projects and certifications.  If a permissions change was not expected, ask your project administrator or RCS support.  See [Sign-In Notices](https://ticrypt.com/docs/user-guide/account/sign-in-notices).
 
 ---
 
 **Q: When I logged into tiCrypt, a message appeared indicating I had a failed login attempt. What should I do?**
 
-To Be Answered
+That is the **Since you last logged in** summary shown at sign-in; it lists failed sign-in attempts.  If you did not make them, change your password, since it means someone tried to sign in as you.  See [Sign-In Notices](https://ticrypt.com/docs/user-guide/account/sign-in-notices).  *(To confirm with the sysadmin: who users should contact.)*
 
 ---
 
@@ -133,11 +133,7 @@ The tiCrypt application may not be able to connect to the servers. Make sure you
 
 **Q: How do I get added to a VM?**
 
-To Be Answered
-
-For reference Andy & Yun were added to the VM by Augustine. Two steps:
-1. Users are added to the VM
-2. Apply additional permissions template to your accounts
+The VM's owner (or a manager) adds you: **VM Settings and Details > Users > Add users**, then chooses your role (Co-owner, Manager or User).  You must also be an active member of the VM's project, otherwise you see "No active membership in this VM's project" and cannot connect.  The person adding you needs the **Share VMs with other users** permission.  See [VM Users](https://ticrypt.com/docs/user-guide/virtual-machines/vm-users#add-users-to-a-virtual-machine).
 
 > Be sure to reload the ticrypt application for it to take affect
 
@@ -184,13 +180,13 @@ Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  
 
 **Q: Can one access data in the "vault" from the terminal on the VM? Or does one need to use the tiCrypt transfer tool?**
 
-To Be Answered
+There is no automatic sync between the Vault and a running VM; you move files with an explicit transfer ([File Operations](https://ticrypt.com/docs/user-guide/virtual-machines/vm-file-operations)), which needs the VM permission for the direction (Vault to VM, VM to Vault) and the matching Vault permission.  For Vault to VM transfers, an **access directory** must exist on the VM's drive first (VM Settings and Details > Access Directories > Create Access Directory).  See the [File Transfer Guide](doc/tiCrypt_FileTransfer_Guide/README.md).
 
 ---
 
 **Q: Where should the project files be stored on the VM?**
 
-To Be Answered
+Store them on a mounted drive under `/drives/`, ideally a separate project data drive and not only the home drive.  Anything outside `/drives/` is discarded when the VM stops.  See [Where drives appear inside the VM](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#where-drives-appear-inside-the-vm).
 
 ---
 
@@ -205,7 +201,7 @@ No — treat the VM as a **login node**, not a compute node.
 
 **Q: Should I shutdown my VM when it is not in use?**
 
-To Be Answered
+Shutting down a VM returns its cores and memory to your team's allocation ([Shut Down a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine)).  Save your work to a mounted drive first, because anything outside `/drives/` is lost.  *(To confirm with the sysadmin: whether BU expects users to shut down idle VMs.)*
 
 ---
 
@@ -377,9 +373,9 @@ No. Only members of a project have full access to that project's data and VM. Ev
 
 **Q: How can I determine what version of key components of ticrypt are installed on our system?**
 
-VM Controller - To be answered
+**VM Controller:** open the VM, then **VM Settings and Details > Overview**.  The header shows the **VMC version** (only for a running VM, and it can differ between VM images).  See [VM Advanced](https://ticrypt.com/docs/user-guide/virtual-machines/vm-advanced).
 
-The Connect Application will have the version numbers for **Front End**, **Back End**, and **Connect Application** as defined in the [TiCrypt Doc](https://ticrypt.com/docs/user-guide/account/connect-application/#check-which-versions-you-are-running). 
+The Connect Application will have the version numbers for **Front End**, **Back End**, and **Connect Application** as defined in the [TiCrypt Doc](https://ticrypt.com/docs/user-guide/account/connect-application/#check-which-versions-you-are-running).  On the login page, the same line shows **f** (front end), **b** (back end) and **c** (Connect).  Hover over **b** to see the back-end address.  Quote all three when reporting a problem.
 
 
 **Q: How does software installed on the staging VM become available on other users' VMs?**
