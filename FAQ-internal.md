@@ -218,7 +218,7 @@ To Be Answered
 **Q: The VM was restarted and I lost the scripts/software I installed.  What happened?**
 
 - Anything not saved onto the mounted drives will be lost when the VM restarts.  A fresh VM image is loaded when the VM is powered on or restarted.
-- TODO:  Add the general files paths of where the Drives are mounted.
+- Save your work under `/drives/` (for example `/drives/drive1` for the home drive).  Anything outside `/drives/` is discarded when the VM stops.  This also applies to Slurm jobs: write results under `/drives/`, because worker VMs are destroyed when the job ends.
 
 ---
 
@@ -270,19 +270,30 @@ To be answered
 
 **Q: How do I find a mounted drive on the VM?  What are the mounted file paths?**
 
-To Be Answered
+Drives are mounted under `/drives/`.  The first drive attached to the VM is the home drive, at `/drives/drive1`.  Every drive also has a link named after the drive, so a drive called `lab-data` is at `/drives/lab-data`.  Either path works in scripts; use the name in anything you write down or share.  Numbers are not reassigned when a drive is detached.  See [Where drives appear inside the VM](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#where-drives-appear-inside-the-vm).
 
 ---
 
 **Q: Is there a limit on how many drives I can create?**
 
-To Be Answered
+The vendor documentation does not state a maximum number of drives.  Each drive's capacity counts against your team's storage quota, and the Create button stays inactive when the quota is used up.  See [Create a New Drive](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#create-a-new-drive).  *(To confirm with the sysadmin: any BU limit on drive count or size.)*
 
 ---
 
 **Q: Can I access the contents of the drives without using a VM?**
 
 In order to see the contents of a drive, the drive needs to be mounted on the VM.  Once it is mounted, you can view the files using the "File Explorer" option in the VM menu, a terminal connected to the VM, or a remote desktop session.
+
+---
+
+**Q: Why am I asked to format and encrypt a drive?**
+
+A new drive has no encryption key until it is formatted.  The first time you attach or mount it, tiCrypt asks you to confirm **Format**.  Formatting erases the drive.  If the drive was attached to a VM before, you must type its name exactly to confirm, so cancel if you are not sure it is empty.
+
+- You need the **Share drives** permission, otherwise tiCrypt refuses before changing anything.
+- If the key cannot be saved after formatting, tiCrypt unmounts the drive again and the task tells you why.  Store nothing on the drive until you mount and format it again.
+- If someone else already uses the drive, ask them to share it with you instead of formatting it.
+- See [Format and encrypt a drive on first use](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#format-and-encrypt-a-drive-on-first-use).
 
 ---
 
