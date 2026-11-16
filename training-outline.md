@@ -69,7 +69,7 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 - What the VM is and how it relates to your project
 - Using the VM terminal:
   - tiCrypty application: Terminal Hub
-  - File menu or browser interface at 127.0.0.1:8080  (enables copy/paste)
+  - File menu (copy/paste is restricted by BU policy; see [issue #17](https://github.com/katgit/BU-tiCrypt/issues/17))
 - Accessing the remote desktop (Windows App on macOS; platform-specific notes)
   - [tiCrypt Remote Desktop App Instructions for Windows](https://docs.google.com/document/d/1akM_C1k1RuConJPDTSzf_32xFlid1zk0/edit)
   - [macOS instructions](https://github.com/katgit/BU-tiCrypt/blob/main/FAQ-internal.md#using-the-vm) 

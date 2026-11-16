@@ -178,7 +178,7 @@ Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  
 
 **Windows:** The top menu does not exist in the terminal, so the above solution does not work.
 
-**Alternative (all platforms):** While tiCrypt is open, open a browser and go to `http://127.0.0.1:8080/`. This will open a tiCrypt interface within your browser. Connect to the terminal for the VM — you should now be able to right-click to access copy and paste functions.
+> **Note:** Copying data out of a tiCrypt VM is restricted at BU for compliance (NIST 800-171).  The terminal's copy/paste keyboard shortcuts show a "clipboard is disabled for your account" message, and BU cannot enable them.  To move files in or out, use the methods in the [File Transfer Guide](doc/tiCrypt_FileTransfer_Guide/README.md).
 
 ---
 
