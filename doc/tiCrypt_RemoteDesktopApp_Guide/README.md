@@ -18,9 +18,7 @@ In the "Instructions for aa-scc-testvm1" pop-up window, click the clipboard icon
 
 A "Remote Desktop Connection security warning" pop-up will appear automatically alongside the Instructions window when you click **Start Remote Desktop**. If it was closed or did not appear, you can launch it manually by downloading the RDP file and double-clicking it (see the [Troubleshooting](#troubleshooting) section for details).
 
-**Optional:** Check the **Clipboard** checkbox before clicking **Connect**. This allows you to copy and paste content between your local machine and the VM, which is highly recommended.
-
-![RDP security warning with Clipboard checkbox](images/rdp-security-warning-clipboard.png)
+> **Note:** Copy/paste between your computer and the VM is restricted by BU policy (see [issue #17](https://github.com/katgit/BU-tiCrypt/issues/17) and [issue #25](https://github.com/katgit/BU-tiCrypt/issues/25)). Leave the **Clipboard** checkbox unchecked unless you have been told otherwise.
 
 #### Step 4: Wait for the Connection
 
