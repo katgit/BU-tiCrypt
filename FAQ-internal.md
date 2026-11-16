@@ -230,7 +230,10 @@ To Be Answered
 
 **Q: I added a user to the VM, or I changed their permissions, but when the user connects to the VM the change is not reflected.  What do I do?**
 
-- The changes made via the tiCrypt Connect interface may not propagate immediately to the VM.  To expedite the process, sync the user permission with the vm following the instructions [here](https://www.ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)
+- Open the VM, then **VM Settings and Details > Users**, and click **Sync user permissions** (top right).  This reconciles the VM's user list with tiCrypt: it adds users who are missing and corrects users whose role does not match.  See [Sync User Access in a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/vm-users#sync-user-access-in-a-virtual-machine).
+- The button only appears for VM managers (Manager or higher) who have the **Share VMs with other users** permission.  If you do not see it, ask a VM owner or your administrator.  If a row in the Users table is highlighted yellow or red, **Re-authorize user(s)** also repairs it.
+- Do not use **Sync user permissions** in the VM's ⋮ menu for this.  It only refreshes access directory permissions on the drives (see [Advanced Operations](https://ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)).
+- Adding someone as a co-owner in the VM configuration syncs them to a running VM automatically.
 - The user may also need to open a fresh terminal to have the changes take affect.
 
 ---
