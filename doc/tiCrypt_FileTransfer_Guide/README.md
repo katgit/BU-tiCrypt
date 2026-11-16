@@ -417,12 +417,6 @@ Items observed during walkthrough testing, flagged here for tracking rather than
 
 - Create inbox has no progress indicator. The action can take a noticeable amount of time with no feedback, making it unclear whether the request was received. A loading state or confirmation message would help.
 
-- Directories copied from the Vault into a VM show root as the owner rather than the logged-in user, which can block the user from accessing their own files (permission denied) without help from an administrator.
-
-![Directory ownership after copying from Vault into a VM](images/vault-to-vm-ownership-issue.png)
-
-*Directory ownership after copying from Vault into a VM*
-
 ## Method Comparison
 
 Now that you've seen each method in detail, here's a closer look at how they work, when to reach for each, and their trade-offs:
