@@ -82,6 +82,20 @@ That is the **Since you last logged in** summary shown at sign-in; it lists fail
 
 ---
 
+**Q: Why was I logged out or locked out of tiCrypt?**
+
+tiCrypt ends or locks your session in these cases:
+
+- **Inactivity.** The session locks after a period without activity and logs you out if it stays locked.  Typing, scrolling and pointer movement count as activity.  See [Session Lock](https://ticrypt.com/docs/user-guide/account/session-lock).
+- **A change to your account.**  When an administrator changes your role or permissions, your open sessions end and you sign in again with the new rights.  Leaving a project removes that project from your open session.
+- **Deactivation.**  Deactivating an account ends every session at once (web app, transfers, your VMs, inbox uploads), and open tabs log out and show the reason.  By default, accounts with no sign-in for 90 days are deactivated.  See [Offboarding in tiCrypt](https://ticrypt.com/articles/user-offboarding).
+
+To continue, sign in again and load your key file.  If you are told your account is deactivated, contact your administrator.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's session timeout, sign-in notices, and whether BU uses the 90-day inactivity deactivation.
+
+---
+
 **Q: What if I forgot my password?**
 
 You cannot reset it yourself, because changing a password needs the current one.  Contact your administrator, who starts a key recovery through key escrow: the escrow users together recover your key, and you receive a new key file and a temporary password over a secure channel.  Load the new key file, log in with the temporary password, then set a new password under **Change Password**.  This only works if your account was enrolled in key escrow.  Without it, a forgotten password means the account and its data are unrecoverable.  See [If You Forgot Your Password](https://ticrypt.com/docs/user-guide/account/change-password#if-you-forgot-your-password).

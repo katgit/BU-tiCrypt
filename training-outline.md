@@ -99,6 +99,8 @@ See [example scripts](https://github.com/katgit/BU-tiCrypt/tree/main/examples/R)
 
 ## 13. Troubleshooting Common Issues
 - Cannot connect: verify BU network or VPN; on Windows, restart the application after connecting VPN
+- Logged out or locked unexpectedly: the session locks after a period of inactivity (typing, scrolling and mouse movement count as activity), and some changes end your session so you sign in again: an administrator changing your role or permissions, removing you from a project, or deactivating your account. Sign in again and load your key file. Contact your administrator if you are told your account is deactivated.
+  - TO CONFIRM WITH THE SYSADMIN: BU's session timeout and sign-in notice, and whether BU deactivates accounts after 90 days without sign-in (the vendor default)
 - Forgot tiCrypt password: contact your administrator
 - Installation fails: verify local admin rights; check OS compatibility
 
