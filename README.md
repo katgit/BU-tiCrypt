@@ -87,9 +87,9 @@ You should now see the BU tiCrypt Deployment screen:
 > **Needs to be tested, based on tiCrypt documentation updates.** The steps and button names in sections 4 to 6 follow the current [tiCrypt Get Started guide](https://ticrypt.com/docs/get-started#2-register-your-account) and have not yet been verified with a new BU account. The screenshots may show older button names and the old order of steps.
 
 1. Click the green **"Create new user account"** button
-2. Click **"Link MFA Account"**. BU requires multi-factor authentication: sign in with your **BU Kerberos** password and approve the **Duo** prompt. (This is the only place you use your Kerberos password.)
+2. Click **"Link MFA Account"**. BU requires multi-factor authentication. A separate window opens with the BU Kerberos login page. Enter your **Kerberos username** (without `@bu.edu`) and your **BU Kerberos** password, then approve the **Duo** prompt. (This is the only place you use your Kerberos password.)
 3. Fill in your information:
-   - **Login ID:** Enter your BU email address (e.g., `rbrown@bu.edu`)
+   - **Login ID:** Enter your full BU email address (e.g., `rbrown@bu.edu`). This is the ID you log in with; it is filled in automatically from your key file at login.
    - **First Name:** Your first name
    - **Last Name:** Your last name
 4. Click **"Next"**
