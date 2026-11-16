@@ -238,6 +238,26 @@ To Be Answered
 
 ---
 
+**Q: How do I shut down or restart a VM?**
+
+- Go to the **Virtual Machines** tab and select the VM.  Click the menu (three dots) next to the VM, then **Power**.
+- In the pop-up, choose **Restart** (a normal shutdown, then the VM starts again from its configuration and you become its owner), **Normal Shutdown** (a safe, orderly shutdown), or **Hard Shutdown** (forces the VM off at once and risks corrupting data on your drives; use only if the VM is not responding, and tick **I accept the risk**).
+- Wait a few minutes for the task to finish.  Anything not saved on a mounted drive is lost when a VM restarts.
+- See [Restart a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#restart-a-virtual-machine) and [Shut Down a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine).
+
+---
+
+**Q: Why is Power (or Restart) greyed out on my VM?**
+
+- Hover over the greyed-out option to see the reason.  Power is available only to the VM's owner (the person who started it), co-owners of its configuration, and Sub-admins and above.  Other managers and regular users of the VM cannot shut it down.
+- A co-owner's Power stays greyed out until the VM's owner has added them to the running VM, which normally happens when the VM starts.  Ask the owner to add you, or to shut the VM down.
+- Restart is greyed out if you are not the owner or a co-owner, if the VM was not started from a VM configuration, or if you lack the **Start VMs from VM configurations** permission.
+- Everyone also needs the **Shut down their VMs** permission.  If the tooltip says "you lack permission to shut down VMs", ask your administrator.
+- If a VM shows **No Connection**, shut it down from its VM configuration (**Power** or **Stop VM**).
+- See [Who can shut down a running VM](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine) and [VM Roles and Permissions](https://ticrypt.com/docs/concepts/vm-roles-and-permissions).
+
+---
+
 **Q: How can I confirm that my VM is configured to use SLURM?**
 
 To be answered
