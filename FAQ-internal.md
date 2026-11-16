@@ -104,6 +104,14 @@ You cannot reset it yourself, because changing a password needs the current one.
 
 ---
 
+**Q: How do I change my password?**
+
+Open the user menu (top left), choose **Change Password**, enter your current password, then enter and confirm the new one and click **Apply**.  A **new key file** is generated and downloads right away, and the old key file stops working, even if you reuse the same password.  Delete every copy of the old key file and keep the new one in a secure place.  Use the new key file from your next login.  See [Change Password](https://ticrypt.com/docs/user-guide/account/change-password).
+
+> **NEEDS TO BE TESTED:** That the new key file downloads immediately when you click Apply at BU.
+
+---
+
 **Q: I lost my private key file, what do I do?**
 
 If you still have your password and another copy of the key file, load that copy.  If you lost both your password and your key file, your data cannot be recovered unless your account was enrolled in key escrow; in that case contact your administrator to start a key recovery.  Keep backups of the key file in more than one secure location.  See [Private Keys](https://ticrypt.com/docs/user-guide/account/private-keys).

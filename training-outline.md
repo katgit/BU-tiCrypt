@@ -41,13 +41,15 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 ## 5. Account Creation
 - Register with your BU email as your Login ID
 - Create a tiCrypt-specific password — do NOT use your Kerberos (BU login) password
-- Fill in profile fields (department, position)
+- Fill in your name and any optional profile fields
 - Account is not active until approved by an administrator — what to expect
 
 ## 6. Your Private Key JSON File (Critical Concept)
 - What it is: a file that holds your personal encryption key
 - Where to store it: secure, backed-up location — keep it safe
 - Every login requires this file
+- You are asked to save it right after you click Register, before your account is approved
+- Changing your password generates a new key file and the old one stops working: download the new one and delete every copy of the old one
 
 ## 7. Logging In
 - Step-by-step: Load Key → select your JSON file → enter tiCrypt password → Login

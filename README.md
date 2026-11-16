@@ -87,7 +87,7 @@ You should now see the BU tiCrypt Deployment screen:
 <img width="353" height="380" alt="Create User Account interface" src="https://github.com/user-attachments/assets/0a467c6a-f6cf-4487-82ee-dfc76fc18ded" />
 
 1. Click the green **"Create new user account"** button
-2. Click **"Link MFA Account"**. BU requires multi-factor authentication. A separate window opens with the BU Kerberos login page. Enter your **Kerberos username** (without `@bu.edu`) and your **BU Kerberos** password, then approve the **Duo** prompt. (This is the only place you use your Kerberos password.)
+2. If prompted, click **"Link MFA Account"**, sign in on the BU Kerberos page that opens (Kerberos username without `@bu.edu`), and approve the **Duo** prompt. Most researchers already have Duo linked to their BU account, and you may be asked for Duo again at later logins.
 3. Fill in your information:
    - **Login ID:** Enter your full BU email address (e.g., `rbrown@bu.edu`). This is the ID you log in with; it is filled in automatically from your key file at login.
    - **First Name:** Your first name
