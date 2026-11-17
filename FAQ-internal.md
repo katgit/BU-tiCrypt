@@ -68,6 +68,23 @@ tiCrypt vendor documentation:
 
 ---
 
+**Q: I can't open a file in the Vault, or I see "No file key available".  What do I do?**
+
+To open a file you need your own key for it, and only someone who holds the file's key can give you one.  Being a member of the project or the group is not enough.  Ask the file's owner to share it with you directly (Vault > My Files > select the file > **Manage Share** > **Share with a user or group**).
+
+Other common causes:
+
+- **The file is in a group folder:** a file uploaded to a group folder shows up for the group only once it is shared with the group.
+- **Project requirements:** for a project-tagged file you must be an active project member and meet the project's certification requirements.  Ask a project manager or admin to add or certify you.
+- **Sharing fails with "Session not authorized to interact with project":** the person you are sharing with is not in the file's project, or is not certified for it.  Ask the project manager.
+- **Shares expire.**  New shares last 30 days by default unless the owner turns the expiration off.  If access stopped, ask the owner to share it again.
+
+See [Share a File](https://ticrypt.com/docs/user-guide/vault/files/share) and [View a File](https://ticrypt.com/docs/user-guide/vault/files/view).
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's default share expiration, since the vendor says an administrator can change it from 30 days.
+
+---
+
 ## User Account Management
 
 **Q: When I log into tiCrypt, a notice appeared indicating permissions have changed on my account. What does this mean?**
