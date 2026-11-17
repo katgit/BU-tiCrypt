@@ -334,6 +334,23 @@ Detaching needs the VM's **Drives** permission and the **Detach drives from VMs*
 
 ---
 
+**Q: Can I share a drive with a colleague, and can I take it back?**
+
+Yes, but sharing gives the other person the drive's encryption key.  Treat it as a disclosure decision rather than a switch you can undo.  Unsharing stops them from mounting the drive in future, but it cannot undo what they have already read.
+
+**To share:** open **Virtual Machines > Drives**, select the drive, open its menu and choose **Share**.  Choose **Read-only** (the default) or **Full access**, click **Share with a user**, pick the users and click **Share with**.
+
+- **Read-only** lets them attach the drive read-only.  **Full access** lets them attach it read-write and share it with others.
+- The drive must have been attached to a VM at least once before it can be shared.
+- You need the **Share drives** and **Get drive keys** permissions.  If the drive is tagged with a project, you must be active in that project.
+- Making someone a VM co-owner also gives them access to the VM's drives.  To let a colleague use a VM without reading everything on it, give them a lower role, such as User.
+
+**To take it back:** in the **Share** window click **Delete** next to the user, or use **Unshare from everyone else** in the drive's menu.  If the user co-owns a VM configuration that uses the drive, tiCrypt asks first, because they will lose the drive in those VMs.  See [Share Drives](https://ticrypt.com/docs/user-guide/virtual-machines/share-drives).
+
+> **TO CONFIRM WITH THE SYSADMIN:** Who grants the **Share drives** and **Get drive keys** permissions to researchers at BU.
+
+---
+
 **Q: I need more space in my drive.  Can I increase the storage capacity of a drive?**
 
 The storage capacity of the drive is specified when creating the drive.  It cannot be changed after the drive is created.
@@ -342,6 +359,30 @@ The storage capacity of the drive is specified when creating the drive.  It cann
 
 
 ## Troubleshooting
+
+**Q: My VM will not start, or a message about drives appears when I click Start VM.  What does it mean?**
+
+When you click **Start VM**, tiCrypt checks things in order and stops at the first failure:
+
+- **Private key:** your key must be unlocked, and tiCrypt may ask for your password.
+- **Quota:** your team's or your own quota has too few cores, memory or devices left ("You need N cores but only have M available").
+- **Project:** "Your membership is not active in this VM configuration's project."  Ask a project manager or admin to add you or renew your membership.
+- **Repeat press:** wait 3 seconds between presses of the start button.
+- **State or home drive:** the configuration must be stopped and have a home drive.
+
+If the problem is with a drive, a **drive problems** prompt lists the affected drives.  **Cancel** is the default and **Ignore and Launch** starts the VM anyway.  The common messages:
+
+- **Drive is not ready:** wait and try again.
+- **Drive is not shared with you:** ask the drive's owner to share it with you.
+- **Drive cannot be attached in read-write or read-only mode:** another VM has the drive attached.  Shut that VM down or detach the drive.
+- **You no longer have access to this drive or drive deleted:** remove the drive from the configuration.
+- **Drive is shared with you in read-only mode:** you need read-write access to a drive the configuration attaches read-write.
+
+If the VM fails while starting, the task shows "Failed at" with a reason, such as the home drive being attached elsewhere or not shared with you, or exceeding your team's core or memory limit.  See [Connect and Access](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access) for the full list.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's team quota values, and who to contact for a quota increase.
+
+---
 
 **Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
 
