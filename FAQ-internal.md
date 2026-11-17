@@ -320,6 +320,20 @@ A new drive has no encryption key until it is formatted.  The first time you att
 
 ---
 
+**Q: How do I detach a drive from a running VM, and mount it again?**
+
+Open **Virtual Machines**, select the VM, then **VM Settings and Details > Drives**.
+
+- **Detach:** select the drive (its Type must be **Mounted**), click **Open full menu**, choose **Detach drive(s)**, and click **Yes**.  The drive is unmounted from the running VM but stays in the VM configuration, so it comes back when the VM restarts.  The **Home** drive cannot be detached.
+- **Detach and remove:** choose **Detach and remove** instead to also take the drive out of the VM configuration, so it does not return on restart.
+- **Remount:** select the drive (Type **Unmounted** or **Unattached**) and click **Remount drive(s)**.
+
+Detaching needs the VM's **Drives** permission and the **Detach drives from VMs** permission, and the option appears for managers and above.  See [Create and Manage Drives](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives).
+
+> **NEEDS TO BE TESTED:** The steps on a BU VM, and whether a researcher can detach drives (this needs the sysadmin-granted permission).
+
+---
+
 **Q: I need more space in my drive.  Can I increase the storage capacity of a drive?**
 
 The storage capacity of the drive is specified when creating the drive.  It cannot be changed after the drive is created.
