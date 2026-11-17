@@ -26,7 +26,7 @@ Source: [BU TechWeb – Submitting your Batch Job](https://www.bu.edu/tech/suppo
 | `-l mem_per_core=#G` | `--mem-per-cpu=#G` | Requests a minimum amount of memory per core/CPU. | No |
 | `-pe omp N` | `--cpus-per-task=N` | Requests N cores/slots on a single node for shared-memory (OpenMP/pthread) jobs. | No |
 | `-pe mpi_#_tasks_per_node N` | `--nodes=X --ntasks-per-node=#` | Requests multiple nodes/tasks for an MPI job. | No |
-| `-t N` | `--array=1-N` | Submits an array job with N tasks. | Yes, but on POC VM, only 1st task finished successfully |
+| `-t N` | `--array=1-N` | Submits an array job with N tasks. | Yes, it works now |
 | `-l cpu_arch=ARCH` | `--constraint=ARCH` | Requests a specific CPU microarchitecture (e.g., broadwell, cascadelake). | NA |
 | `-l cpu_type=TYPE` | `--constraint=TYPE` | Requests a specific CPU model (e.g., Gold-6132). | NA |
 | `-l gpus=G` | `--gpus=G` (or `--gres=gpu:G`) | Requests a node with G GPUs. | NA |
