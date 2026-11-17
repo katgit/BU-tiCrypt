@@ -69,6 +69,8 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 ## 10. Working with the Virtual Machine (VM)
 - How to request VM access (contact your project administrator)
 - What the VM is and how it relates to your project
+- Shutting down and restarting a VM: Power (shut down) and Restart are in the VM menu.  Only the VM's owner, its co-owners and Sub-admins and above can use Power, and you also need the "Shut down their VMs" permission.  Hover over a greyed-out option to see why
+- Shut down your VM when you are not using it so its cores and memory go back to your team's allocation.  Save your work under /drives/, because anything else is discarded when the VM stops (see the FAQ)
 - Using the VM terminal:
   - tiCrypty application: Terminal Hub
   - File menu (copy/paste is restricted by BU policy; see [issue #17](https://github.com/katgit/BU-tiCrypt/issues/17))
