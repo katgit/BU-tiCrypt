@@ -68,35 +68,80 @@ tiCrypt vendor documentation:
 
 ---
 
+**Q: I can't open a file in the Vault, or I see "No file key available".  What do I do?**
+
+To open a file you need your own key for it, and only someone who holds the file's key can give you one.  Being a member of the project or the group is not enough.  Ask the file's owner to share it with you directly (Vault > My Files > select the file > **Manage Share** > **Share with a user or group**).
+
+Other common causes:
+
+- **The file is in a group folder:** a file uploaded to a group folder shows up for the group only once it is shared with the group.
+- **Project requirements:** for a project-tagged file you must be an active project member and meet the project's certification requirements.  Ask a project manager or admin to add or certify you.
+- **Sharing fails with "Session not authorized to interact with project":** the person you are sharing with is not in the file's project, or is not certified for it.  Ask the project manager.
+- **Shares expire.**  New shares last 30 days by default unless the owner turns the expiration off.  If access stopped, ask the owner to share it again.
+
+See [Share a File](https://ticrypt.com/docs/user-guide/vault/files/share) and [View a File](https://ticrypt.com/docs/user-guide/vault/files/view).
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's default share expiration, since the vendor says an administrator can change it from 30 days.
+
+---
+
 ## User Account Management
 
 **Q: When I log into tiCrypt, a notice appeared indicating permissions have changed on my account. What does this mean?**
 
-To Be Answered
+That is the **Since you last logged in** summary shown at sign-in.  It lists failed sign-in attempts and changes to your role, permissions, projects and certifications.  If a permissions change was not expected, ask your project administrator or RCS support.  See [Sign-In Notices](https://ticrypt.com/docs/user-guide/account/sign-in-notices).
 
 ---
 
 **Q: When I logged into tiCrypt, a message appeared indicating I had a failed login attempt. What should I do?**
 
-To Be Answered
+That is the **Since you last logged in** summary shown at sign-in; it lists failed sign-in attempts.  If you did not make them, change your password, since it means someone tried to sign in as you.  See [Sign-In Notices](https://ticrypt.com/docs/user-guide/account/sign-in-notices).  *(To confirm with the sysadmin: who users should contact.)*
+
+---
+
+**Q: Why was I logged out or locked out of tiCrypt?**
+
+tiCrypt ends or locks your session in these cases:
+
+- **Inactivity.** The session locks after a period without activity and logs you out if it stays locked.  Typing, scrolling and pointer movement count as activity.  See [Session Lock](https://ticrypt.com/docs/user-guide/account/session-lock).
+- **A change to your account.**  When an administrator changes your role or permissions, your open sessions end and you sign in again with the new rights.  Leaving a project removes that project from your open session.
+- **Deactivation.**  Deactivating an account ends every session at once (web app, transfers, your VMs, inbox uploads), and open tabs log out and show the reason.  By default, accounts with no sign-in for 90 days are deactivated.  See [Offboarding in tiCrypt](https://ticrypt.com/articles/user-offboarding).
+
+To continue, sign in again and load your key file.  If you are told your account is deactivated, contact your administrator.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's session timeout, sign-in notices, and whether BU uses the 90-day inactivity deactivation.
 
 ---
 
 **Q: What if I forgot my password?**
 
-To Be Answered
+You cannot reset it yourself, because changing a password needs the current one.  Contact your administrator, who starts a key recovery through key escrow: the escrow users together recover your key, and you receive a new key file and a temporary password over a secure channel.  Load the new key file, log in with the temporary password, then set a new password under **Change Password**.  This only works if your account was enrolled in key escrow.  Without it, a forgotten password means the account and its data are unrecoverable.  See [If You Forgot Your Password](https://ticrypt.com/docs/user-guide/account/change-password#if-you-forgot-your-password).
+
+> **TO CONFIRM WITH THE SYSADMIN:** Does BU use key escrow, and is every researcher enrolled?  What is the recovery process at BU?
+
+---
+
+**Q: How do I change my password?**
+
+Open the user menu (top left), choose **Change Password**, enter your current password, then enter and confirm the new one and click **Apply**.  A **new key file** is generated and downloads right away, and the old key file stops working, even if you reuse the same password.  Delete every copy of the old key file and keep the new one in a secure place.  Use the new key file from your next login.  See [Change Password](https://ticrypt.com/docs/user-guide/account/change-password).
+
+> **NEEDS TO BE TESTED:** That the new key file downloads immediately when you click Apply at BU.
 
 ---
 
 **Q: I lost my private key file, what do I do?**
 
-To Be Answered
+If you still have your password and another copy of the key file, load that copy.  If you lost both your password and your key file, your data cannot be recovered unless your account was enrolled in key escrow; in that case contact your administrator to start a key recovery.  Keep backups of the key file in more than one secure location.  See [Private Keys](https://ticrypt.com/docs/user-guide/account/private-keys).
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's escrow status and recovery process (see the previous question).
 
 ---
 
 **Q: How do I determine my current role for a project? Which projects (data access) and teams (resources) am I a member of?**
 
-To Be Answered
+Open the user menu and choose **My Profile**, then **Associations**.  The **Teams** section lists your team memberships and the **Projects** section lists your project memberships.  See [Profile](https://ticrypt.com/docs/user-guide/account/profile#associations).  Your permissions come from the role an administrator gave you plus your team and project memberships.
+
+*(To Be Answered: where your role in a project is displayed.)*
 
 > For what these terms mean, see [What is the difference between a project, a team, and a group?](#general) in the General section.
 
@@ -114,10 +159,9 @@ To Be Answered
 
 **Q: Can I use the same private key JSON file to log in from a different computer or operating system? (e.g., started on a Linux machine and now need to log in from a Windows laptop)**
 
-To Be Answered
+Yes.  In the Connect Application, select your deployment card and click **Download key**, save the `<login-id>_<date>.key.json` file, then on the other computer click **Load Key** and select it.  Connect can hold more than one key at once.  Keep the copy in a secure place and do not email it or share it.  See [Private Keys](https://ticrypt.com/docs/user-guide/account/private-keys).
 
-- Is it technically possible?
-- What is the recommendation for this scenario?
+> **NEEDS TO BE TESTED:** Confirm at BU that a key file downloaded on one operating system (for example Linux) can be loaded and used to log in on another (for example Windows).
 
 ---
 
@@ -133,11 +177,7 @@ The tiCrypt application may not be able to connect to the servers. Make sure you
 
 **Q: How do I get added to a VM?**
 
-To Be Answered
-
-For reference Andy & Yun were added to the VM by Augustine. Two steps:
-1. Users are added to the VM
-2. Apply additional permissions template to your accounts
+The VM's owner (or a manager) adds you: **VM Settings and Details > Users > Add users**, then chooses your role (Co-owner, Manager or User).  You must also be an active member of the VM's project, otherwise you see "No active membership in this VM's project" and cannot connect.  The person adding you needs the **Share VMs with other users** permission.  See [VM Users](https://ticrypt.com/docs/user-guide/virtual-machines/vm-users#add-users-to-a-virtual-machine).
 
 > Be sure to reload the ticrypt application for it to take affect
 
@@ -178,19 +218,19 @@ Starting Remote Desktop via web application (127.0.0.1:8080) is not supported.  
 
 **Windows:** The top menu does not exist in the terminal, so the above solution does not work.
 
-**Alternative (all platforms):** While tiCrypt is open, open a browser and go to `http://127.0.0.1:8080/`. This will open a tiCrypt interface within your browser. Connect to the terminal for the VM — you should now be able to right-click to access copy and paste functions.
+> **Note:** Copying data out of a tiCrypt VM is restricted at BU for compliance (NIST 800-171).  The terminal's copy/paste keyboard shortcuts show a "clipboard is disabled for your account" message, and BU cannot enable them.  To move files in or out, use the methods in the [File Transfer Guide](doc/tiCrypt_FileTransfer_Guide/README.md).
 
 ---
 
 **Q: Can one access data in the "vault" from the terminal on the VM? Or does one need to use the tiCrypt transfer tool?**
 
-To Be Answered
+There is no automatic sync between the Vault and a running VM; you move files with an explicit transfer ([File Operations](https://ticrypt.com/docs/user-guide/virtual-machines/vm-file-operations)), which needs the VM permission for the direction (Vault to VM, VM to Vault) and the matching Vault permission.  For Vault to VM transfers, an **access directory** must exist on the VM's drive first (VM Settings and Details > Access Directories > Create Access Directory).  See the [File Transfer Guide](doc/tiCrypt_FileTransfer_Guide/README.md).
 
 ---
 
 **Q: Where should the project files be stored on the VM?**
 
-To Be Answered
+Store them on a mounted drive under `/drives/`, ideally a separate project data drive and not only the home drive.  Anything outside `/drives/` is discarded when the VM stops.  See [Where drives appear inside the VM](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#where-drives-appear-inside-the-vm).
 
 ---
 
@@ -205,7 +245,7 @@ No — treat the VM as a **login node**, not a compute node.
 
 **Q: Should I shutdown my VM when it is not in use?**
 
-To Be Answered
+Shutting down a VM returns its cores and memory to your team's allocation ([Shut Down a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine)).  Save your work to a mounted drive first, because anything outside `/drives/` is lost.  *(To confirm with the sysadmin: whether BU expects users to shut down idle VMs.)*
 
 ---
 
@@ -218,7 +258,7 @@ To Be Answered
 **Q: The VM was restarted and I lost the scripts/software I installed.  What happened?**
 
 - Anything not saved onto the mounted drives will be lost when the VM restarts.  A fresh VM image is loaded when the VM is powered on or restarted.
-- TODO:  Add the general files paths of where the Drives are mounted.
+- Save your work under `/drives/` (for example `/drives/drive1` for the home drive).  Anything outside `/drives/` is discarded when the VM stops.  This also applies to Slurm jobs: write results under `/drives/`, because worker VMs are destroyed when the job ends.
 
 ---
 
@@ -230,14 +270,37 @@ To Be Answered
 
 **Q: I added a user to the VM, or I changed their permissions, but when the user connects to the VM the change is not reflected.  What do I do?**
 
-- The changes made via the tiCrypt Connect interface may not propagate immediately to the VM.  To expedite the process, sync the user permission with the vm following the instructions [here](https://www.ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)
+- Open the VM, then **VM Settings and Details > Users**, and click **Sync user permissions** (top right).  This reconciles the VM's user list with tiCrypt: it adds users who are missing and corrects users whose role does not match.  See [Sync User Access in a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/vm-users#sync-user-access-in-a-virtual-machine).
+- The button only appears for VM managers (Manager or higher) who have the **Share VMs with other users** permission.  If you do not see it, ask a VM owner or your administrator.  If a row in the Users table is highlighted yellow or red, **Re-authorize user(s)** also repairs it.
+- Do not use **Sync user permissions** in the VM's ⋮ menu for this.  It only refreshes access directory permissions on the drives (see [Advanced Operations](https://ticrypt.com/docs/user-guide/virtual-machines/vm-advanced#sync-users-permissions-in-a-virtual-machine)).
+- Adding someone as a co-owner in the VM configuration syncs them to a running VM automatically.
 - The user may also need to open a fresh terminal to have the changes take affect.
+
+---
+
+**Q: How do I shut down or restart a VM?**
+
+- Go to the **Virtual Machines** tab and select the VM.  Click the menu (three dots) next to the VM, then **Power**.
+- In the pop-up, choose **Restart** (a normal shutdown, then the VM starts again from its configuration and you become its owner), **Normal Shutdown** (a safe, orderly shutdown), or **Hard Shutdown** (forces the VM off at once and risks corrupting data on your drives; use only if the VM is not responding, and tick **I accept the risk**).
+- Wait a few minutes for the task to finish.  Anything not saved on a mounted drive is lost when a VM restarts.
+- See [Restart a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#restart-a-virtual-machine) and [Shut Down a Virtual Machine](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine).
+
+---
+
+**Q: Why is Power (or Restart) greyed out on my VM?**
+
+- Hover over the greyed-out option to see the reason.  Power is available only to the VM's owner (the person who started it), co-owners of its configuration, and Sub-admins and above.  Other managers and regular users of the VM cannot shut it down.
+- A co-owner's Power stays greyed out until the VM's owner has added them to the running VM, which normally happens when the VM starts.  Ask the owner to add you, or to shut the VM down.
+- Restart is greyed out if you are not the owner or a co-owner, if the VM was not started from a VM configuration, or if you lack the **Start VMs from VM configurations** permission.
+- Everyone also needs the **Shut down their VMs** permission.  If the tooltip says "you lack permission to shut down VMs", ask your administrator.
+- If a VM shows **No Connection**, shut it down from its VM configuration (**Power** or **Stop VM**).
+- See [Who can shut down a running VM](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access#shut-down-a-virtual-machine) and [VM Roles and Permissions](https://ticrypt.com/docs/concepts/vm-roles-and-permissions).
 
 ---
 
 **Q: How can I confirm that my VM is configured to use SLURM?**
 
-To be answered
+To Be Answered
 
 ---
 
@@ -247,19 +310,61 @@ To be answered
 
 **Q: How do I find a mounted drive on the VM?  What are the mounted file paths?**
 
-To Be Answered
+Drives are mounted under `/drives/`.  The first drive attached to the VM is the home drive, at `/drives/drive1`.  Every drive also has a link named after the drive, so a drive called `lab-data` is at `/drives/lab-data`.  Either path works in scripts; use the name in anything you write down or share.  Numbers are not reassigned when a drive is detached.  See [Where drives appear inside the VM](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#where-drives-appear-inside-the-vm).
 
 ---
 
 **Q: Is there a limit on how many drives I can create?**
 
-To Be Answered
+The vendor documentation does not state a maximum number of drives.  Each drive's capacity counts against your team's storage quota, and the Create button stays inactive when the quota is used up.  See [Create a New Drive](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#create-a-new-drive).  *(To confirm with the sysadmin: any BU limit on drive count or size.)*
 
 ---
 
 **Q: Can I access the contents of the drives without using a VM?**
 
 In order to see the contents of a drive, the drive needs to be mounted on the VM.  Once it is mounted, you can view the files using the "File Explorer" option in the VM menu, a terminal connected to the VM, or a remote desktop session.
+
+---
+
+**Q: Why am I asked to format and encrypt a drive?**
+
+A new drive has no encryption key until it is formatted.  The first time you attach or mount it, tiCrypt asks you to confirm **Format**.  Formatting erases the drive.  If the drive was attached to a VM before, you must type its name exactly to confirm, so cancel if you are not sure it is empty.
+
+- You need the **Share drives** permission, otherwise tiCrypt refuses before changing anything.
+- If the key cannot be saved after formatting, tiCrypt unmounts the drive again and the task tells you why.  Store nothing on the drive until you mount and format it again.
+- If someone else already uses the drive, ask them to share it with you instead of formatting it.
+- See [Format and encrypt a drive on first use](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives#format-and-encrypt-a-drive-on-first-use).
+
+---
+
+**Q: How do I detach a drive from a running VM, and mount it again?**
+
+Open **Virtual Machines**, select the VM, then **VM Settings and Details > Drives**.
+
+- **Detach:** select the drive (its Type must be **Mounted**), click **Open full menu**, choose **Detach drive(s)**, and click **Yes**.  The drive is unmounted from the running VM but stays in the VM configuration, so it comes back when the VM restarts.  The **Home** drive cannot be detached.
+- **Detach and remove:** choose **Detach and remove** instead to also take the drive out of the VM configuration, so it does not return on restart.
+- **Remount:** select the drive (Type **Unmounted** or **Unattached**) and click **Remount drive(s)**.
+
+Detaching needs the VM's **Drives** permission and the **Detach drives from VMs** permission, and the option appears for managers and above.  See [Create and Manage Drives](https://ticrypt.com/docs/user-guide/virtual-machines/create-and-manage-drives).
+
+> **NEEDS TO BE TESTED:** The steps on a BU VM, and whether a researcher can detach drives (this needs the sysadmin-granted permission).
+
+---
+
+**Q: Can I share a drive with a colleague, and can I take it back?**
+
+Yes, but sharing gives the other person the drive's encryption key.  Treat it as a disclosure decision rather than a switch you can undo.  Unsharing stops them from mounting the drive in future, but it cannot undo what they have already read.
+
+**To share:** open **Virtual Machines > Drives**, select the drive, open its menu and choose **Share**.  Choose **Read-only** (the default) or **Full access**, click **Share with a user**, pick the users and click **Share with**.
+
+- **Read-only** lets them attach the drive read-only.  **Full access** lets them attach it read-write and share it with others.
+- The drive must have been attached to a VM at least once before it can be shared.
+- You need the **Share drives** and **Get drive keys** permissions.  If the drive is tagged with a project, you must be active in that project.
+- Making someone a VM co-owner also gives them access to the VM's drives.  To let a colleague use a VM without reading everything on it, give them a lower role, such as User.
+
+**To take it back:** in the **Share** window click **Delete** next to the user, or use **Unshare from everyone else** in the drive's menu.  If the user co-owns a VM configuration that uses the drive, tiCrypt asks first, because they will lose the drive in those VMs.  See [Share Drives](https://ticrypt.com/docs/user-guide/virtual-machines/share-drives).
+
+> **TO CONFIRM WITH THE SYSADMIN:** Who grants the **Share drives** and **Get drive keys** permissions to researchers at BU.
 
 ---
 
@@ -272,6 +377,30 @@ The storage capacity of the drive is specified when creating the drive.  It cann
 
 ## Troubleshooting
 
+**Q: My VM will not start, or a message about drives appears when I click Start VM.  What does it mean?**
+
+When you click **Start VM**, tiCrypt checks things in order and stops at the first failure:
+
+- **Private key:** your key must be unlocked, and tiCrypt may ask for your password.
+- **Quota:** your team's or your own quota has too few cores, memory or devices left ("You need N cores but only have M available").
+- **Project:** "Your membership is not active in this VM configuration's project."  Ask a project manager or admin to add you or renew your membership.
+- **Repeat press:** wait 3 seconds between presses of the start button.
+- **State or home drive:** the configuration must be stopped and have a home drive.
+
+If the problem is with a drive, a **drive problems** prompt lists the affected drives.  **Cancel** is the default and **Ignore and Launch** starts the VM anyway.  The common messages:
+
+- **Drive is not ready:** wait and try again.
+- **Drive is not shared with you:** ask the drive's owner to share it with you.
+- **Drive cannot be attached in read-write or read-only mode:** another VM has the drive attached.  Shut that VM down or detach the drive.
+- **You no longer have access to this drive or drive deleted:** remove the drive from the configuration.
+- **Drive is shared with you in read-only mode:** you need read-write access to a drive the configuration attaches read-write.
+
+If the VM fails while starting, the task shows "Failed at" with a reason, such as the home drive being attached elsewhere or not shared with you, or exceeding your team's core or memory limit.  See [Connect and Access](https://ticrypt.com/docs/user-guide/virtual-machines/connect-and-access) for the full list.
+
+> **TO CONFIRM WITH THE SYSADMIN:** BU's team quota values, and who to contact for a quota increase.
+
+---
+
 **Q: The tiCrypt application is running but the VM connection isn't working. I see the VM listed with a red status indicator.**
 
 When attempting to connect, the connection stalls indefinitely and does not complete. Restart the local machine, reopen the tiCrypt application and try to connect to the VM.
@@ -283,6 +412,12 @@ When attempting to connect, the connection stalls indefinitely and does not comp
 **Q: What compute resources are available on TiCrypt?  Are GPUs available?**
 
 To Be Answered
+
+**Q: The vendor documentation says there is no `module load`. Can I use `module load` on the BU VMs?**
+
+Yes.  The vendor's [Slurm Jobs](https://ticrypt.com/docs/user-guide/virtual-machines/slurm-jobs) page says tiCrypt VM images have no module system, but BU images support modules.  The software modules are provided on a read-only shared drive that is attached to every VM.  Run `module avail` to see which modules are available and `module load <name>` to load one, as in our [R example](./examples/R/test_r_module.sh).
+
+---
 
 **Q: My Slurm job is not submitting. How do I troubleshoot this issue? (Common Slurm issues)**
 
@@ -343,9 +478,9 @@ No. Only members of a project have full access to that project's data and VM. Ev
 
 **Q: How can I determine what version of key components of ticrypt are installed on our system?**
 
-VM Controller - To be answered
+**VM Controller:** open the VM, then **VM Settings and Details > Overview**.  The header shows the **VMC version** (only for a running VM, and it can differ between VM images).  See [VM Advanced](https://ticrypt.com/docs/user-guide/virtual-machines/vm-advanced).
 
-The Connect Application will have the version numbers for **Front End**, **Back End**, and **Connect Application** as defined in the [TiCrypt Doc](https://ticrypt.com/docs/user-guide/account/connect-application/#check-which-versions-you-are-running). 
+The Connect Application will have the version numbers for **Front End**, **Back End**, and **Connect Application** as defined in the [TiCrypt Doc](https://ticrypt.com/docs/user-guide/account/connect-application/#check-which-versions-you-are-running).  On the login page, the same line shows **f** (front end), **b** (back end) and **c** (Connect).  Hover over **b** to see the back-end address.  Quote all three when reporting a problem.
 
 
 **Q: How does software installed on the staging VM become available on other users' VMs?**

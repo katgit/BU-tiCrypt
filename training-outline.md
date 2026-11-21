@@ -41,13 +41,15 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 ## 5. Account Creation
 - Register with your BU email as your Login ID
 - Create a tiCrypt-specific password — do NOT use your Kerberos (BU login) password
-- Fill in profile fields (department, position)
+- Fill in your name and any optional profile fields
 - Account is not active until approved by an administrator — what to expect
 
 ## 6. Your Private Key JSON File (Critical Concept)
 - What it is: a file that holds your personal encryption key
 - Where to store it: secure, backed-up location — keep it safe
 - Every login requires this file
+- You are asked to save it right after you click Register, before your account is approved
+- Changing your password generates a new key file and the old one stops working: download the new one and delete every copy of the old one
 
 ## 7. Logging In
 - Step-by-step: Load Key → select your JSON file → enter tiCrypt password → Login
@@ -67,9 +69,11 @@ Both the SCC and tiCrypt are BU Research Computing resources, but they serve dif
 ## 10. Working with the Virtual Machine (VM)
 - How to request VM access (contact your project administrator)
 - What the VM is and how it relates to your project
+- Shutting down and restarting a VM: Power (shut down) and Restart are in the VM menu.  Only the VM's owner, its co-owners and Sub-admins and above can use Power, and you also need the "Shut down their VMs" permission.  Hover over a greyed-out option to see why
+- Shut down your VM when you are not using it so its cores and memory go back to your team's allocation.  Save your work under /drives/, because anything else is discarded when the VM stops (see the FAQ)
 - Using the VM terminal:
   - tiCrypty application: Terminal Hub
-  - File menu or browser interface at 127.0.0.1:8080  (enables copy/paste)
+  - File menu (copy/paste is restricted by BU policy; see [issue #17](https://github.com/katgit/BU-tiCrypt/issues/17))
 - Accessing the remote desktop (Windows App on macOS; platform-specific notes)
   - [tiCrypt Remote Desktop App Instructions for Windows](https://docs.google.com/document/d/1akM_C1k1RuConJPDTSzf_32xFlid1zk0/edit)
   - [macOS instructions](https://github.com/katgit/BU-tiCrypt/blob/main/FAQ-internal.md#using-the-vm) 
@@ -99,6 +103,8 @@ See [example scripts](https://github.com/katgit/BU-tiCrypt/tree/main/examples/R)
 
 ## 13. Troubleshooting Common Issues
 - Cannot connect: verify BU network or VPN; on Windows, restart the application after connecting VPN
+- Logged out or locked unexpectedly: the session locks after a period of inactivity (typing, scrolling and mouse movement count as activity), and some changes end your session so you sign in again: an administrator changing your role or permissions, removing you from a project, or deactivating your account. Sign in again and load your key file. Contact your administrator if you are told your account is deactivated.
+  - TO CONFIRM WITH THE SYSADMIN: BU's session timeout and sign-in notice, and whether BU deactivates accounts after 90 days without sign-in (the vendor default)
 - Forgot tiCrypt password: contact your administrator
 - Installation fails: verify local admin rights; check OS compatibility
 
